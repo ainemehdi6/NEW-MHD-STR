@@ -2,7 +2,7 @@
 class DAO{
 	public function __construct(){}
 	public function connexion(){
-		$pdo = new PDO('mysql:host=127.0.0.1;dbname=mhdstr','root','20192020');
+		$pdo = new PDO('mysql:host=0.0.0.0;dbname=..','root','Password');
 		return $pdo;
 	}
 	public function authentificationUser($login,$password){
