@@ -1,6 +1,6 @@
 <?php
 
-$link = mysqli_connect("127.0.0.1", "root", "20192020", "mhdstr");
+$link = mysqli_connect("0.0.0.0", "root", "Password", "Database Name");
  
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
