@@ -5,7 +5,7 @@
 	}
 	$login=$_POST['login'];
 	$password=$_POST['password'];
-	require('DAO.php');
+	include('DAO.php');
 	$dao=new DAO();
 	if($dao->authentificationUser($login,$password)){
 		session_start();

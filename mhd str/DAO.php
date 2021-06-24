@@ -7,14 +7,14 @@ class DAO{
 	}
 	public function authentificationUser($login,$password){
 		$bdd=$this->connexion();
-		$reponse=$bdd->prepare("SELECT * from Users where login= ? and password = ?");
+		$reponse=$bdd->prepare("SELECT * from users where login= ? and password = ?");
    		$reponse->execute([$login,$password]);
    		if ($ligne=$reponse->fetch()) return true;
    		else return false;
 	}
 	public function User($login){
 		$bdd=$this->connexion();
-		$reponse=$bdd->prepare("SELECT * from Users where login= ?");
+		$reponse=$bdd->prepare("SELECT * from users where login= ?");
    		$reponse->execute([$login]);
    		if ($ligne=$reponse->fetch()) return true;
    		else return false;

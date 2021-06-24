@@ -14,8 +14,6 @@
 <?php 
     include('DAO.php');
 	include('main.php');
-	session_start();
-    $login=$_SESSION['login'];
     $ref=$_GET['ref'];
     $dao=new DAO();
     $prod=$dao->afficheProd($ref);

@@ -1,6 +1,6 @@
 <?php
 
-$link = mysqli_connect("0.0.0.0", "root", "Password", "Database Name");
+$link = mysqli_connect('mysql:host=0.0.0.0;dbname=..','root','Password');
  
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());

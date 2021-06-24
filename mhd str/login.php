@@ -11,7 +11,7 @@
   <div class="card-header  bg-default">Client Authentification</div>
   <div class="card-body">
   	
-	<form action="connexion.php" method="post" enctype="multipart/form-data". >
+	<form action="connexion.php" method="post">
 	  <div class="form-group">
 	    <label for="login">Login :</label>
 	    <input type="text" name="login" class="form-control" required>

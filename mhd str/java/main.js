@@ -14,7 +14,7 @@ $(document).ready(function(){
 		var inputVal = $(this).val();
 		var resultDropdown = $(this).siblings(".result");
 		if(inputVal.length){
-			$.get("search.php", {term: inputVal}).done(function(data){
+			$.get("/search.php", {term: inputVal}).done(function(data){
 			resultDropdown.html(data);
 			});
 		} 

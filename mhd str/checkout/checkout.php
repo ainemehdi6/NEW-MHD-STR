@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['login'])){
+	header("location:login.php");
+	die();
+}
+?>
 <html>
 <head>
 <meta charset="utf-8">
@@ -5,15 +12,14 @@
 <link rel="shortcut icon"  href="../images/logo.jpg">
 <link rel="stylesheet" type="text/css" href="style1.css">
 	<script src="https://kit.fontawesome.com/70a642cd7c.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-	<script type="text/javascript" src="../java/main.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="/java/main.js"></script>
 </head>
 <body>
     <section class="main">
         <?php
             include('../main.php');
             include('../DAO.php');
-            session_start();
             $login=$_SESSION['login'];
             $ref=$_POST['ref'];
             $qt=$_POST['sel_prod_qt'];

@@ -1,6 +1,6 @@
 <html>
 	<!--logo----------->
-	<div class="logo"><a href="/mhd str/index.php"><font>MHD</font>STR</a> </div>
+	<div class="logo"><a href="/index.php"><font>MHD</font>STR</a> </div>
 	<!--side-shearch-box-------------->
 	<div class="side-box">
 		<!--search--------------->	
@@ -15,7 +15,7 @@
 		<!--basket--------------->
 		<div class="basket-btn">
 			<!--icon------------->
-			<a classe="basket-icon" href="cart/cart.html">
+			<a classe="basket-icon" href="/cart/cart.php">
 				<i class="fas fa-shopping-bag"></i>
 			</a>
 			<!--nbr-unit------------->

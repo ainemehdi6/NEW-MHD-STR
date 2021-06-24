@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['login'])){
+	header("location:login.php");
+	die();
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +37,6 @@
  	<!--product-------------------------------->
  	<?php
 		include('DAO.php');
-		session_start();
 		$login=$_SESSION['login'];
 		$dao=new DAO();
 		$categ=$dao->listeCategories();
