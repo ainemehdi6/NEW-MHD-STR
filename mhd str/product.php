@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MEHDI STORE</title>
-	<link rel="shortcut icon"  href="images/logo.jpg">
+    <link rel="shortcut icon"  href="images/logo.jpg">
     <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-	<script type="text/javascript" src="java/main.js"></script>
 </head>
 <body>
 <?php 
@@ -82,6 +81,58 @@
 <!--copyright------------------>
 <a href="#" class="copyright">Copyright 2020. MHDSTR By El Mehdi El Aine.</a>
 <!--java-script---------------->
-<script src="js/js.js"></script>
+<script>
+<?php foreach($prod as $p) { foreach($imgs as $is) {  ?>
+const colors = document.querySelectorAll('.left-column .album span') ;
+const image = document.querySelector('.left-column .main-img img') ;
+const input = document.querySelector('.right-column .quantity input');
+const price = document.querySelector('.right-column .price') ;
+
+    input.addEventListener('change',()=> {
+        price.textContent = `USD ${input.value * <?php echo $p[3] ?>}` ;
+	}) ;
+	colors[0].addEventListener('click' , ()=> {
+        image.src =' <?php echo $p[7] ?> ';
+    }) ;
+    colors[1].addEventListener('click' , ()=> {
+        image.src = '<?php echo $is[0] ?>' ;
+    }) ;
+    colors[2].addEventListener('click' , ()=> {
+        image.src = '<?php echo $is[1] ?>' ;
+	}) ;
+
+</script>
+<?php };}; ?>
+<script>
+    	$(function() {
+	$('ul.nav a').bind('click',function(event){
+		var $anchor = $(this);
+		$('html, body').stop().animate({
+			scrollTop: $($anchor.attr('href')).offset().top
+		}, 1000);
+		event.preventDefault();
+	});
+});
+
+
+$(document).ready(function(){
+	$('.search-box input[type="text"]').on("keyup input", function(){
+		var inputVal = $(this).val();
+		var resultDropdown = $(this).siblings(".result");
+		if(inputVal.length){
+			$.get("/search.php", {term: inputVal}).done(function(data){
+			resultDropdown.html(data);
+			});
+		} 
+		else{
+			resultDropdown.empty();
+		}
+	});
+	$(document).on("click", ".result p", function(){
+		$(this).parents(".search-box").find('input[type="text"]').val($(this).text());
+		$(this).parent(".result").empty();
+	});
+});
+</script>
 </body>
 </html>
