@@ -49,7 +49,7 @@ if(!isset($_SESSION['login'])){
                     <div class="label">Country / Region *</div> 
             <select id="country" name="country" class="input" value="'.$c[3].'">
                 <option value="" disabled selected>Select a contry / region...</option>
-                <option value="mehdi 7mar">Afghanistan</option>
+                <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
                 <option value="Albania">Albania</option>
                 <option value="Algeria">Algeria</option>
