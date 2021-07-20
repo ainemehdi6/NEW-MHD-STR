@@ -4,7 +4,7 @@ With MHDSTR the user or the client can navigate and buy different products after
 
 NOW I WILL SHOW YOU SOME Screenshots OF MHDSTR WEBSITE:
 
-This is the Home page of MHDSTR where the user can navigate between different products and categories and with the search input, the user can find any product by entering a letter of the name of the product.
+This is the Home page of MHDSTR where the user can navigate between different products and categories and with the search input, the user can find any product by entering a letter of the name product name.
 ![Home1](https://user-images.githubusercontent.com/76266919/119241100-fa3a5400-bb4b-11eb-9d79-c3f322de4a00.PNG)
 ![Home2](https://user-images.githubusercontent.com/76266919/119241105-ff979e80-bb4b-11eb-9d09-b2d019e90935.PNG)
 ![Home3](https://user-images.githubusercontent.com/76266919/119241106-02928f00-bb4c-11eb-8db7-af050edae8b8.PNG)
